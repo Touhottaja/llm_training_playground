@@ -8,7 +8,8 @@ from transformers import (
     TrainingArguments
 )
 
-TRAINING_DATA_PATH = ""
+TRAINING_DATA_PATH = "./" + ""
+MODEL_NAME = "./" + "pretrained_gpt2"
 
 # Load the GPT2 tokenizer
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
@@ -52,6 +53,6 @@ print("Training completed!")
 
 # Save the model
 print("Saving the model...")
-model.save_pretrained("./pretrained_gpt2")
-tokenizer.save_pretrained("./pretrained_gpt2")
+model.save_pretrained(MODEL_NAME)
+tokenizer.save_pretrained(MODEL_NAME)
 print("Model saved!")
